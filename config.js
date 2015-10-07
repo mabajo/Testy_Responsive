@@ -2,8 +2,12 @@
 exports.config = {
   framework: 'jasmine2',
   seleniumAddress: 'http://localhost:4444/wd/hub', //dla stnadrdowego testu
-  
-  specs: ['spec_android.js'],
+  capabilities: {
+	    //'browserName': 'firefox',
+	    //'browserName': 'chrome',
+	    'browserName': 'internet explorer',
+	},
+  specs: ['spec.js'],
 
   
   
@@ -50,6 +54,8 @@ exports.config = {
      haslo: '3987540',
       },
      ],
+     
+     
 	}	
 
  		
