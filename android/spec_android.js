@@ -1,12 +1,6 @@
 
 describe('Zakup krawata o wybranych parametrach', function() {
 
-	
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-//***************DATA DRIVEN - DWA ROZWIĄZANIA - ******************************************************//
-//***************ROZWIĄZANIE 1  - PARAMETRY ROZDZIELCZOŚCI EKRANU POBIERANE Z PLIKU JSON***************//
-//***************ROZWIĄZANIE 2  - PARAMETRY POSZCZEGÓLNYCH TESTÓW POBIERANE Z PLIKU CONFIG*************//
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		
 	it('sprawdzenie tytułu', function() {
