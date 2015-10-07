@@ -69,12 +69,13 @@ var parametry = require('./parametry_testow/parametry.json');
 	     	expect(element(by.cssContainingText('.filter-title', 'Length')).isDisplayed()).toBe(true);
 	    	
 	    	console.log("Test 5 - sprawdzenie czy widoczne sa kategorie filtrów"); 
-	    		    	
+	    	element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click();	    	
 	    });
 ///////////////////////////////////////////////////////////////////////////////////////////
 	    
 	    it('wybranie filtru - kolor', function() {
 	    	//sprawdź czy istnieje i kliknij kolor
+	    	element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click();
 	    	expect(element(by.cssContainingText('.filter-title', 'Color')).isDisplayed()).toBe(true);
 	    	browser.findElement(by.css(browser.params[0].kolor_krawata)).then(function(webElement) {
 	    		element(by.css(browser.params[0].kolor_krawata)).click();
@@ -84,17 +85,19 @@ var parametry = require('./parametry_testow/parametry.json');
 	        }, function(err) {
 	            if (err.state && err.state === 'no such element') {
 	                console.log("Test 6 - filtr",browser.params[0].kolor_krawata, "nie jest dostępny");
+	                element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click(); 	
 	            } else {
 	               promise.rejected(err);
 	            }
 	        }); 
-	    	   	
+	    	
 	        });
 	    	
 ///////////////////////////////////////////////////////////////////////////////////////////
 	    
 	    it('wybranie filtru - szerokosc', function() {
 	    	//kliknij filtry
+	    	
 	    	element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click();
 	    	//sprawdź czy istnieje i kliknij kolor
 	    	expect(element(by.cssContainingText('.filter-title', 'Width')).isDisplayed()).toBe(true);
@@ -106,11 +109,12 @@ var parametry = require('./parametry_testow/parametry.json');
 	        }, function(err) {
 	            if (err.state && err.state === 'no such element') {
 	                console.log("Test 7 - filtr ",browser.params[0].szerokosc_krawata,  " nie jest dostępny");
+	                element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click(); 	
 	            } else {
 	               promise.rejected(err);
 	            }
 	        }); 
-	    	   	
+	   
 	        });
 	    
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -128,11 +132,12 @@ var parametry = require('./parametry_testow/parametry.json');
 	        }, function(err) {
 	            if (err.state && err.state === 'no such element') {
 	                console.log("Test 8 - filtr ",browser.params[0].tkanina_krawata ," nie jest dostępny");
+	                element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click(); 	
 	            } else {
 	               promise.rejected(err);
 	            }
 	        }); 
-	    	   	
+	    	 	
 	        });
 	    	
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -150,11 +155,12 @@ var parametry = require('./parametry_testow/parametry.json');
 	        }, function(err) {
 	            if (err.state && err.state === 'no such element') {
 	                console.log("Test 9 - filtr ",browser.params[0].dlugosc_krawata ," nie jest dostępny");
+	                element(by.xpath("/html/body/div/div[2]/div[1]/div/div[2]/div[1]/h2/a")).click(); 	
 	            } else {
 	               promise.rejected(err);
 	            }
 	        }); 
-	    	   	
+	    	 	
 	        });
 	    
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -167,15 +173,8 @@ var parametry = require('./parametry_testow/parametry.json');
 	       });
 	    
 	    	console.log("Test 10 - wybranie szczegółów pierwszego wyświetlonego krawata")
-	    	
-	    	
-	    	//browser.findElement(By.xPath('/html/body/div[1]/div[2]/div/div[1]/div/h1/span')).then(function(Webelement) {
-	    		//var tekst = element(By.xPath('/html/body/div[1]/div[2]/div/div[1]/div/h1/span')).getText();
-	    		//console.log(tekst);
-	    	//});
-	    	
-	    	//console.log(nazwa_krawata);
-	    }); 
+	        
+	    	   }); 
 	    
 ///////////////////////////////////////////////////////////////////////////////////////////	    
 	   	
@@ -215,6 +214,7 @@ var parametry = require('./parametry_testow/parametry.json');
 	
 
 });
+
 
 
 
