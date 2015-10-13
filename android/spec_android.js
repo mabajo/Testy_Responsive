@@ -1,10 +1,10 @@
-
+﻿
 describe('Zakup krawata o wybranych parametrach', function() {
 
 
 		
 	it('sprawdzenie tytułu', function() {
-    	//ustawienie rozmiaru okna przeglądarki
+    	//ustawienie rozmiaru okna przeglądarki.
 	    //browser.manage().window().setSize(data.szer,data.wys);
 	    
 	    
